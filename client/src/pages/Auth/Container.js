@@ -1,5 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
+import FilledButton from '../../components/Buttons/Filled';
+import {ChevronRight} from '@material-ui/icons';
 
 const useStyles = makeStyles({
   root: {
@@ -35,11 +37,16 @@ const useStyles = makeStyles({
       }
       }
     }
+  },
+  submit: {
+    marginTop: '2rem',
+    display: 'flex',
+    justifyContent: 'center',
   }
 
 })
 
-const Container = ({children, title, message}) => {
+const Container = ({children, title, submit, message, icon, onSubmit}) => {
   const classes = useStyles();
 
   return (
@@ -52,6 +59,9 @@ const Container = ({children, title, message}) => {
         <div>
           <h1>{title}</h1>
           {children}
+          <div className={classes.submit}>
+            <FilledButton onClick={onSubmit} className={classes.submit} icon={icon || <ChevronRight/>}>{submit}</FilledButton>
+          </div>
         </div>
         <p>{message.text} <a href={message.href}>{message.linkText}</a> </p>
       </main>

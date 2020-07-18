@@ -13,13 +13,15 @@ const FilledButton = ({icon, children, onClick}) => {
   const classes = useStyles();
 
   return (
-      <Button 
-        className={classes.root}
-        variant='contained'
-        endIcon={icon}
-      >
-        {children}
-      </Button>
+      <div onClick={onClick}>
+        <Button 
+          className={classes.root}
+          variant='contained'
+          endIcon={icon}
+        >
+          {children}
+        </Button>
+      </div>
   )
 }
 
