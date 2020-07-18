@@ -4,7 +4,6 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles({
   root: {
-    marginBottom: '1rem',
     padding: '0 10px',
     borderRadius: '5px',
     color: '#999999',
@@ -18,12 +17,13 @@ const useStyles = makeStyles({
   }
 })
 
-const InputOutlined = ({icon, value, placeholder, onChange}) => {
+const InputOutlined = ({style, icon, value, placeholder, onChange}) => {
   const classes = useStyles();
 
   return (
     <Input 
       value={value}
+      style={style}
       placeholder={placeholder}
       className={classes.root}
       disableUnderline={true} 

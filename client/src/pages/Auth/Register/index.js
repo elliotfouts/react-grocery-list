@@ -24,16 +24,15 @@ const Register = () => {
   const classes = useStyles();
 
   return (
-  <Container  title={title} message={message}>
-    <div className={classes.root}>
-        <OauthButton href={'http://www.google.com'}>Login with Google</OauthButton>
-        <p>OR</p>
-        <InputOutlined placeholder={'name'} value={''} icon={<PersonOutline/>}/>
-        <InputOutlined placeholder={'email'} value={''} icon={<MailOutline/>}/>
-        <InputOutlined placeholder={'password'} value={''} icon={<LockOutlined/>}/>
-        <FilledButton className={classes.submit} icon={<ChevronRight/>}>Login</FilledButton>
-    </div>
-  </Container>
+    <Container  title={title} message={message} submit={'Sign Up'}>
+      <div className={classes.root}>
+          <OauthButton href={'http://www.google.com'}>Login with Google</OauthButton>
+          <p>OR</p>
+          <InputOutlined style={{marginBottom: '1rem'}} placeholder={'name'} value={''} icon={<PersonOutline/>}/>
+          <InputOutlined style={{marginBottom: '1rem'}} placeholder={'email'} value={''} icon={<MailOutline/>}/>
+          <InputOutlined style={{marginBottom: '1rem'}} placeholder={'password'} value={''} icon={<LockOutlined/>}/>
+      </div>
+    </Container>
   )
 }
 
