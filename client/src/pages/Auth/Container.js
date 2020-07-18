@@ -2,14 +2,15 @@ import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import FilledButton from '../../components/Buttons/Filled';
 import {ChevronRight} from '@material-ui/icons';
+import Palette from '../../utils/palette'
 
 const useStyles = makeStyles({
   root: {
     height: '100vh',
-    backgroundColor: '#007370',
+    backgroundColor: Palette.Green,
     '& header': {
       padding: '1rem 2rem',
-      color: '#FFFFFF',
+      color: Palette.White,
       '& h1': {
         fontSize: '1rem',
       }
@@ -19,9 +20,9 @@ const useStyles = makeStyles({
     }
   },
   content: {
-    backgroundColor: '#EEEEEE',
+    backgroundColor: Palette.OffWhite,
     borderRadius: '1rem 1rem 0 0',
-    boxShadow: '-1rem 0rem 2rem rgba(0, 0, 0, 0.3)',
+    boxShadow: '0rem -2rem 2rem rgba(0, 0, 0, 0.3)',
     padding: '2rem',
     display: 'flex',
     flexDirection: 'column',
@@ -33,7 +34,7 @@ const useStyles = makeStyles({
       fontWeight: '200',
       marginBottom: '2rem',
       '& a': {
-        color: 'red',
+        color: Palette.Green,
       }
       }
     }
