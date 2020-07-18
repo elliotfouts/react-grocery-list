@@ -46,7 +46,7 @@ const useStyles = makeStyles({
 
 })
 
-const Container = ({children, title, submit, message, icon,}) => {
+const Container = ({children, title, submit, message, icon, onSubmit}) => {
   const classes = useStyles();
 
   return (
@@ -60,7 +60,7 @@ const Container = ({children, title, submit, message, icon,}) => {
           <h1>{title}</h1>
           {children}
           <div className={classes.submit}>
-            <FilledButton className={classes.submit} icon={icon || <ChevronRight/>}>{submit}</FilledButton>
+            <FilledButton onClick={onSubmit} className={classes.submit} icon={icon || <ChevronRight/>}>{submit}</FilledButton>
           </div>
         </div>
         <p>{message.text} <a href={message.href}>{message.linkText}</a> </p>
