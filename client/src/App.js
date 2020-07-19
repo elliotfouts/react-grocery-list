@@ -34,7 +34,6 @@ function App() {
                 <Route exact path='/list' component={List}/>
                 <Route exact path='/add' component={Add}/>
                 <Route exact path='/groups' component={Groups}/>
-                <Route exact path='/profile' component={Profile}/>
                 <Route exact path='/resetpassword' component={ResetPassword}/>
                 <Route exact path='/login' component={Login}/>
                 <Route exact path='/register' component={Register}/>
