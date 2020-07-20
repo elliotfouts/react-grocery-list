@@ -39,7 +39,7 @@ const Register = () => {
   return (
     <Container  title={title} message={message} submit={'Sign Up'} onSubmit={handleSubmit}>
       <div className={classes.root}>
-          <OauthButton href={'http://www.google.com'}>Login with Google</OauthButton>
+          <OauthButton href={'http://www.google.com'}>Sign Up with Google</OauthButton>
           <p>OR</p>
           <InputOutlined onChange={handleInputChange} style={{marginBottom: '1rem'}} placeholder={'name'} value={user.name} icon={<PersonOutline/>}/>
           <InputOutlined onChange={handleInputChange} style={{marginBottom: '1rem'}} placeholder={'email'} value={user.email} icon={<MailOutline/>}/>

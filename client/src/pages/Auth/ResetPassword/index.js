@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Container from '../Container';
 import Link from '../../../components/Text/Link'
 import {makeStyles} from '@material-ui/styles';
-import {Send, LockOutlined, ChevronRight} from '@material-ui/icons';
+import {Send, MailOutline, ChevronRight} from '@material-ui/icons';
 import InputOutlined from '../../../components/Inputs/Outlined';
 import OauthButton from '../../../components/Buttons/Oauth';
 import validateFields from '../../../utils/validateFields';
@@ -26,17 +26,19 @@ const ResetPassword = () => {
     href: "/register"
     }
 
+  const handleInputChange = ({target: {value}}) => setEmail(value);
+
   const handleSubmit = () => {
-    const invalidField = validateFields(email);
+    const invalidField = validateFields({email});
     if (invalidField) console.log(`please fill out ${invalidField}`);
-    else console.log('send reset link');
+    else console.log(`send reset link to @${email}`);
   }
 
   return (
     <Container title={title} message={message} submit={'Send'} onSubmit={handleSubmit} icon={<Send/>}>
       <div className={classes.root}>
-        {/* <InputOutlined style={{marginBottom: '1rem'}} placeholder={'email'} value={''} icon={<MailOutline/>}/> */}
-        <InputOutlined style={{marginBottom: '0.5rem'}} placeholder={'password'} value={''} icon={<LockOutlined/>}/>
+        <InputOutlined style={{marginBottom: '1rem'}} onChange={handleInputChange} placeholder={'email'} value={email || ''} icon={<MailOutline/>}/>
+        {/* <InputOutlined style={{marginBottom: '0.5rem'}} placeholder={'password'} value={''} icon={<LockOutlined/>}/> */}
         <Link style={{color: '#999999'}}>We will send you a link</Link>
       </div>
     </Container>

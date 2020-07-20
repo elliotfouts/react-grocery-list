@@ -1,11 +1,12 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import {makeStyles} from '@material-ui/styles';
+import Palette from '../../utils/palette';
 
 const useStyles = makeStyles({
   root: {
-    backgroundColor: '#007370',
-    color: '#FFFFFF'
+    backgroundColor: Palette.Green,
+    color: Palette.White
   }
 })
 
