@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },
 })
 
-const StandardCard = ({children, onClick}) => {
+const FoodDbCard = ({children, onClick}) => {
   const classes = useStyles();
 
   return (
@@ -46,4 +46,4 @@ const StandardCard = ({children, onClick}) => {
   )
 }
 
-export default StandardCard;
+export default FoodDbCard;
