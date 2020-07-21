@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import Container from '../Container';
-import Link from '../../../components/Text/Link'
+import {Link} from '../../../components/Text'
 import {makeStyles} from '@material-ui/styles';
 import {MailOutline, LockOutlined, ChevronRight} from '@material-ui/icons';
-import InputOutlined from '../../../components/Inputs/Outlined';
-import OauthButton from '../../../components/Buttons/Oauth';
+import {InputOutlined} from '../../../components/Inputs';
+import {OauthButton} from '../../../components/Buttons/';
 import validateFields from '../../../utils/validateFields';
 
 

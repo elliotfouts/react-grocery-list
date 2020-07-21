@@ -1,8 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
-import Title from '../../components/Text/Title';
-import Subtitle from '../../components/Text/Subtitle';
-import InputOutlined from '../../components/Inputs/Outlined';
+import {Title, Subtitle} from '../../components/Text';
+import {InputOutlined} from '../../components/Inputs';
 import {Search} from '@material-ui/icons'
 import {makeStyles} from '@material-ui/styles';
 import Palette from '../../utils/palette'

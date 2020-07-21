@@ -6,7 +6,7 @@ import Palette from '../../utils/palette'
 
 const useStyles = makeStyles({
   root: {
-    borderRadius: '5px',
+    borderBottom: '1px solid currentColor',
     color: Palette.Grey,
     '& input' : {
       marginLeft: '10px',
@@ -18,7 +18,7 @@ const useStyles = makeStyles({
   }
 })
 
-const InputPlain = ({style, name, icon, value, placeholder, onChange, type}) => {
+const InputUnderlined = ({style, name, icon, value, placeholder, onChange, type}) => {
   const classes = useStyles();
 
   return (
@@ -37,4 +37,4 @@ const InputPlain = ({style, name, icon, value, placeholder, onChange, type}) => 
   )
 }
 
-export default InputPlain;
+export default InputUnderlined;
