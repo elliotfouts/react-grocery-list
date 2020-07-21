@@ -3,7 +3,7 @@ import Container from '../Container';
 import Link from '../../../components/Text/Link'
 import {makeStyles} from '@material-ui/styles';
 import {Send, MailOutline, ChevronRight} from '@material-ui/icons';
-import InputOutlined from '../../../components/Inputs/Outlined';
+import {InputOutlined} from '../../../components/Inputs';
 import OauthButton from '../../../components/Buttons/Oauth';
 import validateFields from '../../../utils/validateFields';
 

@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/styles';
 import Container from '../Container'
-import InputOutlined from '../../../components/Inputs/Outlined';
-import OauthButton from '../../../components/Buttons/Oauth';
-import FilledButton from '../../../components/Buttons/Filled';
+import {InputOutlined} from '../../../components/Inputs';
+import {FilledButton, OauthButton} from '../../../components/Buttons';
 import {PersonOutline, MailOutline, LockOutlined, ChevronRight, Visibility, VisibilityOff} from '@material-ui/icons';
 import validateFields from '../../../utils/validateFields';
 
