@@ -5,4 +5,5 @@ export default {
   Grey: '#07031A50',
   OffWhite: '#EEEEEE',
   White: '#FFFFFF',
+  Red: '#DD5E5E',
 }
