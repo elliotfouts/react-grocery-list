@@ -8,6 +8,7 @@ import {Divider} from '@material-ui/core';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ChevronRight from '@material-ui/icons/ChevronRight';
 import {makeStyles} from '@material-ui/styles';
+import Palette from '../../utils/palette';
 
 const useStyles = makeStyles({
 })
@@ -34,6 +35,9 @@ const Profile = () => {
             </StandardCard>
           )
         })}
+        <StandardCard style={{backgroundColor: Palette.Green, color: Palette.White}}>
+            <h3>NEW LIST</h3>
+        </StandardCard>
       </PaddedContainer>
       <Navbar/>
     </div>

@@ -5,42 +5,38 @@ import Palette from '../../utils/palette';
 
 const useStyles = makeStyles({
   root: {
-    
-  },
-  media: {
-    height: 100,
-  },
-  label: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    '& image': {
+      padding: '1rem',
+    },
+    '& img': {
+      maxHeight: '100px',
+      maxWidth: '100px',
+    },
+    '& .label': {
+      width: '100%',
+      color: Palette.Green,
       backgroundColor: Palette.GreenTransparent,
-      color: Palette.Green
+    }
   },
 })
 
-const FoodDbCard = ({children, onClick}) => {
+const FoodDbCard = ({label, imageUrl, onClick, style}) => {
   const classes = useStyles();
 
   return (
       <div onClick={onClick}>
-        <Card 
-          className={classes.root}
-        >
-            <CardActionArea className={classes.label}>
-                <CardMedia
-                className={classes.media}
-                image= 'https://via.placeholder.com/140x100'
-                />
-                <CardContent
-                >
-                <Typography 
-                gutterBottom 
-                variant="body2" 
-                component="p"
-                >
-                    Lizard
-                </Typography>
-                </CardContent>
-            </CardActionArea>
-          {children}
+        <Card
+          style={style} 
+          className={classes.root}>
+          <image>
+            <img src={imageUrl}/>
+          </image>
+           <p className='label'>
+            {label}
+           </p>
         </Card>
       </div>
   )
