@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import {List, Add, People, Person} from '@material-ui/icons';
+import {List, Add, Person} from '@material-ui/icons';
 import Palette from '../../utils/palette';
 
 
@@ -54,8 +54,8 @@ const Navbar = () => {
       <a className={(active == 'add' && 'active')} href='/add'>
         <Add/>
       </a>
-      <a className={(active == 'groups' && 'active')} href='/groups'>
-        <People/>
+      <a className={(active == 'profile' && 'active')} href='/profile'>
+        <Person/>
       </a>
     </nav>
   )
