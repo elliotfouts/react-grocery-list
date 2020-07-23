@@ -11,12 +11,13 @@ const useStyles = makeStyles({
   }
 })
 
-const FilledButton = ({icon, children, onClick}) => {
+const FilledButton = ({icon, children, onClick, fullWidth}) => {
   const classes = useStyles();
 
   return (
       <div onClick={onClick}>
         <Button 
+          fullWidth={fullWidth}
           className={classes.root}
           variant='contained'
           endIcon={icon}
