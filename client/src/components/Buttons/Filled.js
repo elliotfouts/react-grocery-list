@@ -6,7 +6,8 @@ import Palette from '../../utils/palette';
 const useStyles = makeStyles({
   root: {
     backgroundColor: Palette.Green,
-    color: Palette.White
+    color: Palette.White,
+    marginBottom: 10
   }
 })
 
