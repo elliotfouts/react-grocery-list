@@ -57,9 +57,5 @@ const groceryArray = [
   
     }
   ]
-<<<<<<< HEAD
-
-=======
->>>>>>> d056bbca78793617ec47a611ff124373c640b853
 
 export default Add;
