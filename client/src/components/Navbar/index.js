@@ -9,6 +9,7 @@ import Palette from '../../utils/palette';
 
 const useStyles = makeStyles({
   root: {
+    background: Palette.OffWhite,
     position: 'fixed',
     bottom: '0',
     width: '100%',

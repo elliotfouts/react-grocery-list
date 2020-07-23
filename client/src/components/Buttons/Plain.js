@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   }
 })
 
-const PlainButton = ({children, onClick}) => {
+const PlainButton = ({children, onClick, style}) => {
   const classes = useStyles();
 
   return (
@@ -16,6 +16,7 @@ const PlainButton = ({children, onClick}) => {
         <Button 
           className={classes.root}
           variant='text'
+          style={style}
         >
           {children}
         </Button>

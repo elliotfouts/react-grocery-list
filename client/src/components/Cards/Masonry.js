@@ -24,6 +24,7 @@ const MasonryElement = ({groceries}) => {
     return(
         <div>
             <Masonry>
+            
             <div className={classes.rightCol}>
             <FilledButton fullWidth={true} icon={<Add/>}>ADD NEW</FilledButton>
             {groceries.map(({label, imageUrl}, index) => (index % 2 == 0) && <FoodDBCard style={{marginBottom: '1rem',}}label={label} imageUrl={imageUrl}/>)}
