@@ -28,7 +28,7 @@ const Add = () => {
         <Title style={{marginBottom: '0.5rem'}}>Hey Elliot</Title>
         <Subtitle style={{marginBottom: '4rem'}}>Find foods that you want</Subtitle>
         <InputOutlined placeholder='search for a food...' icon={<Search/>}/>
-        <p style={{margin: '1rem 0rem',}}>Showing results for</p>
+        <p style={{margin: '1rem 0rem'}}>Showing results for</p>
       <MasonryElement groceries={groceryArray}/>
       </main>
       <Navbar/>
@@ -57,6 +57,9 @@ const groceryArray = [
   
     }
   ]
+<<<<<<< HEAD
 
+=======
+>>>>>>> d056bbca78793617ec47a611ff124373c640b853
 
 export default Add;

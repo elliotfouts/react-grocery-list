@@ -18,7 +18,6 @@ const useStyles = makeStyles({
     }
   })
 
-
 const MasonryElement = ({groceries}) => {
     const classes = useStyles();
 
