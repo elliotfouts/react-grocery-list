@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import {Title, Subtitle} from '../../components/Text';
-import {FoodDBCard} from '../../components/Cards';
+import {FoodDBCard, MasonryElement} from '../../components/Cards';
 import {InputOutlined} from '../../components/Inputs';
 import {Search} from '@material-ui/icons'
 import {makeStyles} from '@material-ui/styles';
-import Palette from '../../utils/palette'
+import Palette from '../../utils/palette';
 
 const useStyles = makeStyles({
   root: {
@@ -41,7 +41,8 @@ const Add = () => {
         <Subtitle style={{marginBottom: '4rem'}}>Find foods that you want</Subtitle>
         <InputOutlined placeholder='search for a food...' icon={<Search/>}/>
         <p>Showing results for</p>
-        {groceryArray.map(({label, imageUrl}) => <FoodDBCard style={{marginBottom: '1rem',}}label={label} imageUrl={imageUrl}/>)}
+        {/* {groceryArray.map(({label, imageUrl}) => <FoodDBCard style={{marginBottom: '1rem',}}label={label} imageUrl={imageUrl}/>)} */}
+      <MasonryElement/>
       </main>
       <Navbar/>
     </div>
