@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     padding: '1rem 2rem',
     display: 'flex',
     justifyContent: 'space-between',
+    boxShadow: '1rem 1rem 1rem rgba(0, 0, 0, 0.2)',
   }
 })
 

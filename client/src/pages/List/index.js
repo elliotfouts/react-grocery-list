@@ -6,16 +6,22 @@ import ProfilePicture from '../../components/ProfilePicture';
 import Palette from '../../utils/palette';
 import {makeStyles} from '@material-ui/styles';
 import {ChevronRight, Add} from '@material-ui/icons';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import Header from './Header';
+import GroceryList from './GroceryList';
 
 const useStyles = makeStyles({
+  root: {
+    background: Palette.White,
+  }
 })
 
 const List = () => {
   const classes=useStyles();
   return (
-    <div>
+    <div className={classes.root}>
         <Header/>
+        <GroceryList/>
         <Navbar/>
     </div>
   )
