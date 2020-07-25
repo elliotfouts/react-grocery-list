@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     borderBottom: '1px solid currentColor',
     color: Palette.Grey,
     '& input' : {
-      marginLeft: '10px',
+      marginLeft: '0px',
       color: Palette.Black,
     },
     '& input::placeholder': {

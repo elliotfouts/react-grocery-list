@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   }
 })
 
-const FilledButton = ({icon, children, onClick, fullWidth}) => {
+const FilledButton = ({icon, children, onClick, fullWidth, style}) => {
   const classes = useStyles();
 
   return (
@@ -21,6 +21,7 @@ const FilledButton = ({icon, children, onClick, fullWidth}) => {
           className={classes.root}
           variant='contained'
           endIcon={icon}
+          style={style}
         >
           {children}
         </Button>

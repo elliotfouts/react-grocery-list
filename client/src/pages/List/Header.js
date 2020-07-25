@@ -22,8 +22,8 @@ const Header = () => {
     <div className={classes.root}>
       <Select style={{color: 'currentColor', fontSize: '2rem'}} selected='Family' label='Lists'>
           <MenuItem value={'Family'}>Family</MenuItem>
-          <MenuItem value={20}>Camping</MenuItem>
-          <MenuItem value={30}>Birthday Party</MenuItem>
+          <MenuItem value={'Camping'}>Camping</MenuItem>
+          <MenuItem value={'Birthday Party'}>Birthday Party</MenuItem>
       </Select>
 
       <PlainButton style={{color: 'currentColor'}}>

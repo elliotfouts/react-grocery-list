@@ -1,9 +1,17 @@
 import React from 'react';
+import Navbar from '../../components/Navbar';
+import {TopLeftIcon} from '../../components/Icons';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import FoodInfo from './FoodInfo';
 
-const Add = () => {
+const Food = () => {
   return (
-    <h1>Add Page</h1>
+    <div>
+        <TopLeftIcon href='/add' icon={<ChevronLeftIcon/>}/>
+
+        <FoodInfo/>
+    </div>
   )
 }
 
-export default Add;
+export default Food;
