@@ -22,7 +22,7 @@ const useStyles = makeStyles({
   content: {
     backgroundColor: Palette.OffWhite,
     borderRadius: '1rem 1rem 0 0',
-    boxShadow: '0rem -2rem 2rem rgba(0, 0, 0, 0.3)',
+    boxShadow: '0rem -0.5rem 0.5rem rgba(0, 0, 0, 0.3)',
     padding: '2rem',
     display: 'flex',
     flexDirection: 'column',

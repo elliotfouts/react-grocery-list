@@ -5,31 +5,24 @@ import {InputPlain, InputUnderlined} from '../../components/Inputs';
 import ProfilePicture from '../../components/ProfilePicture';
 import Palette from '../../utils/palette';
 import {makeStyles} from '@material-ui/styles';
-import {ChevronRight, Add} from '@material-ui/icons'
+import {ChevronRight, Add} from '@material-ui/icons';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Header from './Header';
+import GroceryList from './GroceryList';
 
 const useStyles = makeStyles({
   root: {
-    padding: '1rem',
+    background: Palette.White,
   }
 })
 
 const List = () => {
   const classes=useStyles();
   return (
-    <div>
-      <div className={classes.root}>
-        <h1>List Page</h1>
-        <StandardCard>
-          <h3>Fouts Family</h3>
-          <ChevronRight/>
-        </StandardCard>
-        <StandardCard style={{backgroundColor: Palette.Green, color: Palette.White}}>
-            <h3>ADD MEMBER</h3>
-        </StandardCard>
-        <InputPlain placeholder={'testing'}/>
-        <InputUnderlined placeholder={'testing'}/>
-      </div>
-      <Navbar/>
+    <div className={classes.root}>
+        <Header/>
+        <GroceryList/>
+        <Navbar/>
     </div>
   )
 }
