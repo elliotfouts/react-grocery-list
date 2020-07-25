@@ -5,6 +5,7 @@ import {Add} from '@material-ui/icons'
 import FoodDBCard from './FoodDb';
 import {makeStyles} from '@material-ui/styles';
 
+
 const useStyles = makeStyles({
     rightCol: {
         width:'50%', 
@@ -26,7 +27,7 @@ const MasonryElement = ({groceries}) => {
             <Masonry>
             
             <div className={classes.rightCol}>
-            <FilledButton fullWidth={true} icon={<Add/>}>ADD NEW</FilledButton>
+            <FilledButton style={{padding: '2rem 0rem'}} fullWidth={true} icon={<Add/>}>ADD NEW</FilledButton>
             {groceries.map(({label, imageUrl}, index) => (index % 2 == 0) && <FoodDBCard style={{marginBottom: '1rem',}}label={label} imageUrl={imageUrl}/>)}
             </div>
             <div className={classes.leftCol}>
