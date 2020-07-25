@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
+import {TopRightIcon} from '../../components/Icons';  
 import {Title, Subtitle} from '../../components/Text';
 import {FoodDBCard, MasonryElement} from '../../components/Cards';
 import {InputOutlined} from '../../components/Inputs';
@@ -25,6 +26,7 @@ const Add = () => {
   return (
     <div>
       <main className={classes.root}>
+        <TopRightIcon icon={<i class="fas fa-barcode"></i>}/>
         <Title style={{marginBottom: '0.5rem'}}>Hey Elliot</Title>
         <Subtitle style={{marginBottom: '4rem'}}>Find foods that you want</Subtitle>
         <InputOutlined placeholder='search for a food...' icon={<Search/>}/>
