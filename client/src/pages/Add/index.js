@@ -26,7 +26,7 @@ const Add = () => {
   return (
     <div>
       <main className={classes.root}>
-        <TopRightIcon icon={<i class="fas fa-barcode"></i>}/>
+        <TopRightIcon icon={<i class="fas fa-barcode fa-2x"></i>}/>
         <Title style={{marginBottom: '0.5rem'}}>Hey Elliot</Title>
         <Subtitle style={{marginBottom: '4rem'}}>Find foods that you want</Subtitle>
         <InputOutlined placeholder='search for a food...' icon={<Search/>}/>
