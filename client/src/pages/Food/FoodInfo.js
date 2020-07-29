@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import {InputUnderlined, InputPlain} from '../../components/Inputs';
 import {Select} from '../../components/Select';
-import {FilledButton} from '../../components/Buttons';
+import {FilledButton, AddImageButton} from '../../components/Buttons';
 import {MenuItem, Card} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
 import Palette from '../../utils/palette';
 import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
+import ImageIcon from '@material-ui/icons/ImageOutlined';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 const useStyles = makeStyles({
@@ -51,7 +52,7 @@ const useStyles = makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-  }
+  },
 })
 
 const FoodInfo = () => {
@@ -74,7 +75,7 @@ const FoodInfo = () => {
       <Card className={classes.card}>
         {grocery.imageUrl
         ? <img src={grocery.imageUrl}/>
-        : <p>Add image button</p>
+        : <AddImageButton/>
         }
         <InputPlain placeholder='quantity'/>
         <InputPlain placeholder='note'/>
