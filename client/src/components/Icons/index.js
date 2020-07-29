@@ -1,6 +1,7 @@
 import React from 'react';
 import {IconButton} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
+import {TopRight, TopLeft} from '../Position';
 
 const useStyles = makeStyles({
   top: {
@@ -22,9 +23,11 @@ export const TopRightIcon = ({onClick, href, icon}) => {
 
   return (
     <a href={href}>
-      <IconButton onClick={onClick} className={`${classes.top} ${classes.right}`}>
-        {icon}
-      </IconButton>
+      <TopRight>
+        <IconButton onClick={onClick}>
+          {icon}
+        </IconButton>
+      </TopRight>
     </a>
   )
 }
@@ -33,9 +36,11 @@ export const TopLeftIcon = ({icon, onClick, href}) => {
   const classes = useStyles();
   return (
     <a href={href}>
-      <IconButton onClick={onClick} className={`${classes.top} ${classes.left}`}>
-        {icon}
-      </IconButton>
+      <TopLeft>
+        <IconButton onClick={onClick}>
+          {icon}
+        </IconButton>
+      </TopLeft>
     </a>
   )
 }

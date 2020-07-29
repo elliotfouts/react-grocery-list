@@ -3,7 +3,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import CssBaseline from '@material-ui/core/CssBaseline';
-import {Login, Register, ResetPassword, List, Add, Food, Profile, Settings} from './pages'
+import {Login, Register, ResetPassword, List, Add, Food, Profile, Settings, IndividualList} from './pages'
 
 const theme = createMuiTheme({
   palette: {
@@ -26,6 +26,7 @@ function App() {
           <Router>
               <Switch>
                 <Route exact path='/list' component={List}/>
+                <Route exact path='/list/:_id' component={IndividualList}/>
                 <Route exact path='/add' component={Add}/>
                 <Route exact path='/food/:_id' component={Food}/>
                 <Route exact path='/profile/settings' component={Settings}/>
