@@ -39,7 +39,7 @@ const ResetPassword = () => {
       <div className={classes.root}>
         <InputOutlined style={{marginBottom: '1rem'}} onChange={handleInputChange} placeholder={'email'} value={email || ''} icon={<MailOutline/>}/>
         {/* <InputOutlined style={{marginBottom: '0.5rem'}} placeholder={'password'} value={''} icon={<LockOutlined/>}/> */}
-        <Link style={{color: '#999999'}}>We will send you a link</Link>
+        <Link style={{color: '#999999'}}>We will send you an email with a reset link</Link>
       </div>
     </Container>
   )

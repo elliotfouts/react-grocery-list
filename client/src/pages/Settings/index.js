@@ -35,13 +35,11 @@ const Settings = () => {
       <PaddedContainer>
         <div className= {classes.picture}>
           <ProfilePicture size={85} border={0} imageUrl={imageUrl} style={{marginBottom: '2rem',}}/>
-          <FilledButton icon={<CropOriginalIcon/>}>SELECT</FilledButton>
         </div>
         <InputUnderlined style={{marginBottom: '50px'}} placeholder={'Jane Doe'}></InputUnderlined>
         <InputUnderlined style={{marginBottom: '50px'}} placeholder={'janedoe@gmail.com'}></InputUnderlined>
         <PlainButton style={{color: Palette.Green}}>Change Password</PlainButton>
       </PaddedContainer>
-      <Navbar/>
     </div>
   )
 }

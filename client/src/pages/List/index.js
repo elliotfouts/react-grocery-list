@@ -22,7 +22,6 @@ const List = () => {
     <div className={classes.root}>
         <Header/>
         <GroceryList/>
-        <Navbar/>
     </div>
   )
 }

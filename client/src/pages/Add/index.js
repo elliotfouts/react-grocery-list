@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import {TopRightIcon} from '../../components/Icons';  
-import {Title, Subtitle} from '../../components/Text';
 import {FoodDBCard, MasonryElement} from '../../components/Cards';
 import {InputOutlined} from '../../components/Inputs';
 import {Search} from '@material-ui/icons'
@@ -26,10 +25,7 @@ const Add = () => {
   return (
     <div>
       <main className={classes.root}>
-        <TopRightIcon icon={<i class="fas fa-barcode fa-2x"></i>}/>
-        
-        <Title style={{marginBottom: '0.5rem'}}>Hey Elliot</Title>
-        <Subtitle style={{marginBottom: '4rem'}}>Find foods that you want</Subtitle>
+        <TopRightIcon icon={<i class="fas fa-barcode"></i>}/>
         <InputOutlined placeholder='search for a food...' icon={<Search/>}/>
         <p style={{margin: '1rem 0rem'}}>Showing results for</p>
       <MasonryElement groceries={groceryArray}/>
