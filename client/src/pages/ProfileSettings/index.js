@@ -36,9 +36,11 @@ const Settings = () => {
         <div className= {classes.picture}>
           <ProfilePicture size={85} border={0} imageUrl={imageUrl} style={{marginBottom: '2rem',}}/>
         </div>
-        <InputUnderlined style={{marginBottom: '50px'}} placeholder={'Jane Doe'}></InputUnderlined>
-        <InputUnderlined style={{marginBottom: '50px'}} placeholder={'janedoe@gmail.com'}></InputUnderlined>
-        <PlainButton style={{color: Palette.Green}}>Change Password</PlainButton>
+        <InputUnderlined style={{marginBottom: '1rem'}} placeholder={'Jane Doe'}></InputUnderlined>
+        <InputUnderlined style={{marginBottom: '2rem'}} placeholder={'janedoe@gmail.com'}></InputUnderlined>
+        <p style={{color: Palette.Green, fontSize: '1.5rem', marginBottom: '1rem'}}>Change Password</p>
+        <InputUnderlined style={{marginBottom: '1rem'}} type={'password'} placeholder={'New Password'}></InputUnderlined>
+        <InputUnderlined style={{marginBottom: '1rem'}} type={'password'} placeholder={'Confirm New Password'}></InputUnderlined>
       </PaddedContainer>
     </div>
   )

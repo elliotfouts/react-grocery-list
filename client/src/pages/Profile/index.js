@@ -22,7 +22,7 @@ const Profile = () => {
     <div>
       <TopRightIcon href='/profile/settings' icon={<SettingsIcon/>}/>
       <PaddedContainer>
-        <Title style={{marginBottom: '0.5rem'}}>Hey Elliot</Title>
+        <Title style={{marginBottom: '0.5rem'}}>Hey Jane</Title>
         <Subtitle style={{marginBottom: '2rem'}}>Pick a list to add items</Subtitle>
       {/* <Divider/> */}
         {listNames.map(list => {

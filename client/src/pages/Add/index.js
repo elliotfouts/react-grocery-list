@@ -1,11 +1,12 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
-import {TopRightIcon} from '../../components/Icons';  
+import {TopRightIcon, TopLeftIcon} from '../../components/Icons';  
 import {FoodDBCard, MasonryElement} from '../../components/Cards';
 import {InputOutlined} from '../../components/Inputs';
 import {Search} from '@material-ui/icons'
 import {makeStyles} from '@material-ui/styles';
 import Palette from '../../utils/palette';
+import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles({
   root: {
@@ -25,12 +26,12 @@ const Add = () => {
   return (
     <div>
       <main className={classes.root}>
-        <TopRightIcon icon={<i class="fas fa-barcode"></i>}/>
-        <InputOutlined placeholder='search for a food...' icon={<Search/>}/>
-        <p style={{margin: '1rem 0rem'}}>Showing results for</p>
+        <TopLeftIcon icon={<i class="fas fa-barcode"></i>}/>
+        <TopRightIcon icon={<a style={{color: Palette.Green}} href='/list'><CloseIcon/></a>}/>
+        <InputOutlined style={{marginTop: '3rem'}}placeholder='search for a food...' icon={<Search/>}/>
+        <p style={{margin: '1rem 0rem'}}>Can't find what you want? <a style={{color: Palette.Green, textDecoration: 'none'}} href='/food'>Create new item</a></p>
       <MasonryElement groceries={groceryArray}/>
       </main>
-      <Navbar/>
     </div>
   )
 }
