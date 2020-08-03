@@ -2,11 +2,12 @@ import React from 'react';
 import Navbar from '../../components/Navbar';
 import ProfilePicture from '../../components/ProfilePicture';
 import {PaddedContainer} from '../../components/Container';
+import {Title, Subtitle} from '../../components/Text';
 import {StandardCard} from '../../components/Cards';
 import {TopRightIcon} from '../../components/Icons'
 import {Divider} from '@material-ui/core';
 import SettingsIcon from '@material-ui/icons/Settings';
-import ChevronRight from '@material-ui/icons/ChevronRight';
+import InfoIcon from '@material-ui/icons/Info';
 import {makeStyles} from '@material-ui/styles';
 import Palette from '../../utils/palette';
 
@@ -21,25 +22,23 @@ const Profile = () => {
     <div>
       <TopRightIcon href='/profile/settings' icon={<SettingsIcon/>}/>
       <PaddedContainer>
-        <ProfilePicture size={75} border={0} imageUrl={imageUrl} style={{marginBottom: '2rem',}}/>
-        <p style={{marginBottom: '1rem'}}>Jane Doe</p>
-        <p>janedoe@gmail.com</p>
-      </PaddedContainer>
-      <Divider/>
-      <PaddedContainer>
+        <Title style={{marginBottom: '0.5rem'}}>Hey Jane</Title>
+        <Subtitle style={{marginBottom: '2rem'}}>Pick a list to add items</Subtitle>
+      {/* <Divider/> */}
         {listNames.map(list => {
           return (
+            <a style={{textDecoration: 'none'}}href='/list'>
             <StandardCard>
               <h3>{list}</h3>
-              <ChevronRight/>
+              <a style={{color: 'currentColor'}}href='/list/settings'><InfoIcon/></a>
             </StandardCard>
+            </a>
           )
         })}
         <StandardCard style={{backgroundColor: Palette.Green, color: Palette.White}}>
             <h3>NEW LIST</h3>
         </StandardCard>
       </PaddedContainer>
-      <Navbar/>
     </div>
   )
 }

@@ -4,6 +4,6 @@ export {default as Register} from './Auth/Register';
 export {default as ResetPassword} from './Auth/ResetPassword';
 export {default as Food} from './Food';
 export {default as List} from './List';
+export {default as ListSettings} from './ListSettings';
 export {default as Profile} from './Profile';
-export {default as Settings} from './Settings';
-export {default as IndividualList} from './IndividualList';
+export {default as ProfileSettings} from './ProfileSettings';

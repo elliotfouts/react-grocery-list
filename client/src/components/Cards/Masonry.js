@@ -27,9 +27,9 @@ const MasonryElement = ({groceries}) => {
             <Masonry>
             
             <div className={classes.rightCol}>
-            <FilledButton style={{padding: '2rem 0'}} fullWidth={true} icon={<Add/>}>ADD NEW</FilledButton>
             {groceries.map(({label, imageUrl}, index) => (index % 2 == 0) && <FoodDBCard style={{marginBottom: '1rem',}}label={label} imageUrl={imageUrl}/>)}
             </div>
+            
             <div className={classes.leftCol}>
             {groceries.map(({label, imageUrl}, index) => (index % 2 != 0) && <FoodDBCard style={{marginBottom: '1rem',}}label={label} imageUrl={imageUrl}/>)}
             </div>
