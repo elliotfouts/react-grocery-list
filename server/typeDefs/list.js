@@ -1,8 +1,10 @@
 module.exports = `
     type List {
+      _id: ID,
       name: String!,
       users: [User],
-
+      stores: [Store],
+      categories: [String]
       groceries: [GroceryOnList],
     }
 
@@ -16,6 +18,26 @@ module.exports = `
     type LogItem {
       user: User,
       message: String,
-      date: Date,
+      date: String,
+    }
+
+    input addListInput {
+      name: String,
+      users: [ID], 
+      stores: [ID],
+      categories: [String],
+      groceries: [ID]
+    }
+
+    input updateListInput {
+      _id: ID!,
+      set: addListInput,
+      unset: addListInput,
+      push: addListInput,
+      pull: addListInput,
+    }
+
+    input deleteListInput {
+      _id: ID!,
     }
 `;
