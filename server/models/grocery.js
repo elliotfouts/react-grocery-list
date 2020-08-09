@@ -13,6 +13,11 @@ const grocerySchema = new mongoose.Schema({
   upc: {
     type: String,
     unique: true,
+  },
+  popularity: {
+    type: String,
+    default: 1,
+    required: true
   }
 });
 
