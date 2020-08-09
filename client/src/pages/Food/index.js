@@ -24,6 +24,7 @@ const useStyles = makeStyles({
 
 const Food = () => {
   const classes = useStyles();
+
   return (
     <div>
         <TopLeftIcon href='/add' icon={<ChevronLeftIcon/>}/>
