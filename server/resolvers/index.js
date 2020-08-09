@@ -18,7 +18,7 @@ module.exports = {
           } catch (error) {
             console.log(error);
           }
-        },
+        }, 
         // getList: async (_id) => {
         //   try {
         //     return await List.findById(_id);
@@ -60,7 +60,6 @@ module.exports = {
           console.log(error);
         }
       },
-
       // addList: async (parents, list, context) => {
       //   try {
       //     return await List.create(list);
