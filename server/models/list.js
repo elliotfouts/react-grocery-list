@@ -8,7 +8,7 @@ const listSchema = new mongoose.Schema({
   },
   users: [{ type: Schema.Types.ObjectId, ref: 'user' }],
   categories: [String],
-  groceries: [{ type: Schema.Types.ObjectId, ref: 'groceryOnList' }}],
+  groceries: [{ type: Schema.Types.ObjectId, ref: 'groceryOnList' }],
 });
 
 const List = mongoose.model("list", listSchema);

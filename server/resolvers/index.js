@@ -1,4 +1,4 @@
-const {User, Grocery, List, Store} =  require('../models');
+const {User, Grocery, GroceryOnList, List} =  require('../models');
 const {dropUndefined} = require('../utils/dropUndefined');
 
 module.exports = {
@@ -35,16 +35,10 @@ module.exports = {
           }
         },
 
-        getStores: async () => {
+        getGroceriesOnList: async (_id) => {
           try {
-            return await Store.find({});
-          } catch (error) {
-            console.log(error);
-          }
-        },
-        getStore: async (parent, {_id}) => {
-          try {
-            return await Store.findById(_id);
+            const list = List.findById(_id).populate('groceries');
+            console.log(list);
           } catch (error) {
             console.log(error);
           }
@@ -52,14 +46,14 @@ module.exports = {
 
         getLists: async () => {
           try {
-            return await List.find({});
+            return await List.find({}).populate({path: 'groceries', populate: {path: 'grocery'}});
           } catch (error) {
             console.log(error);
           }
         },
         getList: async (parent, {_id}) => {
           try {
-            return await List.findById(_id);
+            return await List.findById(_id).populate({path: 'groceries', populate: {path: 'grocery'}});
           } catch (error) {
             console.log(error);
           }
@@ -118,27 +112,36 @@ module.exports = {
         }
       },
 
-      addStore: async (parents, {input:store}, context) => {
+      addGroceryOnList: async (parents, {input: {groceryInfo, listId}}, context) => {
         try {
-          const newStore = await Store.create(store);
-          console.log(newStore);
-          return newStore;
+          const newGroceryOnList = await GroceryOnList.create(groceryInfo);
+          const {groceries: groceryList} = await List.findByIdAndUpdate(listId, {$push: {groceries: newGroceryOnList._id}}, {new: true}).populate({path: 'groceries', populate: {path: 'grocery'}});
+          for (let i = 0; i < groceryList.length; i++) {
+            if (JSON.stringify(groceryList[i]._id) == JSON.stringify(newGroceryOnList._id)) return groceryList[i]
+          }
         } catch (error) {
           console.log(error);
         }
       },
-      updateStore: async (parents, {input: {_id, set, unset, push, pull}}) => {
+      updateGroceryOnList: async (parents, {input: {_id, name, imageUrl, quantity, category, note}}, context) => {
         try {
-          const unformattedParameters = {$set: set, $unset: unset, $push: push, $pull: pull};
-          const formattedParameters = dropUndefined(unformattedParameters);
-          return await Store.findByIdAndUpdate(_id, formattedParameters, {new: true});
+          const unformattedGroceryOnListParameters = {quantity, category, note};
+          const formattedGroceryOnListParameters = dropUndefined(unformattedGroceryOnListParameters);
+          const updatedGroceryOnList = await GroceryOnList.findByIdAndUpdate(_id, formattedGroceryOnListParameters, {new: true});
+
+          const unformattedGroceryParameters = {name, imageUrl};
+          const formattedGroceryParameters = dropUndefined(unformattedGroceryParameters);
+          Grocery.findByIdAndUpdate(updatedGroceryOnList.grocery, formattedGroceryParameters, {new: true});
+          
+          return updatedGroceryOnList;
         } catch (error) {
           console.log(error);
         }
       },
-      deleteStore: async (parents, {input:{_id}}, context) => {
+      deleteGroceryOnList: async (parents, {input: {_id}}, context) => {
         try {
-          return await Store.findByIdAndDelete(_id);
+          const deletedGrocery = await GroceryOnList.findByIdAndDelete(_id);
+          return deletedGrocery;
         } catch (error) {
           console.log(error);
         }
