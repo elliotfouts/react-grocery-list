@@ -7,20 +7,8 @@ const listSchema = new mongoose.Schema({
     required: true,
   },
   users: [{ type: Schema.Types.ObjectId, ref: 'user' }],
-  stores: [{ type: Schema.Types.ObjectId, ref: 'store' }],
   categories: [String],
-  groceries: [{
-    grocery: { type: Schema.Types.ObjectId, ref: 'grocery' },
-    quantity: String,
-    category: String,
-    note: String,
-    store: { type: Schema.Types.ObjectId, ref: 'store' },
-    log: [{
-      user: { type: Schema.Types.ObjectId, ref: 'user' },
-      message: String,
-      date: Date,
-    }],
-  }],
+  groceries: [{ type: Schema.Types.ObjectId, ref: 'groceryOnList' }}],
 });
 
 const List = mongoose.model("list", listSchema);

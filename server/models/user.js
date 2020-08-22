@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true
   },
+  googleDisplayName: String,
   googleId: String,
   lists: [{ type: Schema.Types.ObjectId, ref: 'list' }]
 });
